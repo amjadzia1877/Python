@@ -1,0 +1,72 @@
+# Calculator with user input
+# To create a simple calculator
+
+# Defining functions
+# This function adds two numbers
+def add(a, b):
+    return a + b
+
+# This function subtracts two numbers
+def subtract(a, b):
+    return a - b
+
+# This function multiplies two numbers
+def multiply (a, b):
+    return a * b
+
+# This function divided two numbers
+def divide(a, b):
+    return a / b
+
+# This function for Exponentiation of the first number by the second number
+def exponentiation (a, b):
+    return a ** b
+
+# This function for Modulus, the remainder of a division
+def modulus (a, b):
+    return a % b
+
+# This function for floor division, to find the quotient of two numbers
+def quotient (a, b):
+    return a // b
+
+print("Select operation.")
+print("1 = Add")
+print("2 = Subtract")
+print("3 = Multiply")
+print("4 = Divide")
+print("5 = Exponentiation")
+print("6 = Modulus, the remainder of a division")
+print("7 = Floor Division - quotient")
+
+while True:
+    # Taking user input
+    choice = input("Enter your choice(1/2/3/4/5/6/7): ")
+    if choice in ('1', '2', '3', '4', '5', '6', '7'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter first number: "))
+
+        if choice == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+        
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+            
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+            
+        elif choice == '4':
+            print(num1, "/", num2, "=", divide(num1, num2))
+
+        elif choice == '5':
+            print(num1, "**", num2, "=", exponentiation(num1, num2))
+            
+        elif choice == '6':
+            print(num1, "%*", num2, "=", modulus(num1, num2))
+            
+        elif choice == '7':
+            print(num1, "//*", num2, "=", quotient(num1, num2))
+        break # Remove break function to continue with calculator 
+    else:
+        print("Invalid Input")
+        break # Remove break function to continue with calculator 
